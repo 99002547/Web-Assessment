@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        div{
+            background-color: blue;
+            color:lightblue;
+            text-align:center;
+            font-size: 20pt;
+        }
+        h1{
+            background-color: pink;
+            text-align: center;
+            border:5px solid black;
+        }
+        #pdisplay{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        function display(){
+        var name=document.getElementById("uname").value;
+        var dob=document.getElementById("udob").value;
+        var education=document.getElementById("ueducation").value;
+        var gender=document.getElementsByName("ugender").value;
+        var pdiv=document.getElementById("submit");
+        document.getElementById("pdisplay").innerText="Name:"+name+", DOB:"+dob+", Education:"+education+", Gender:"+gender;
+        }
+    </script>
+</head>
+<body>
+    <h1> User Details Form</h1>
+    <div>
+        <p>Enter the Name:<input type="text" id="uname"></p>
+        <p>Enter the DOB:<input type="date" id="udob"></p>
+        <p>Enter the Education:
+            <select id="ueducation">
+                <option>Graduation</option>
+                <option>Under graduation</option>
+                <option>Post graduation</option>
+                <option>Pre university</option>
+                <option>School</option>
+            </select></p>
+        <p>Enter the Gender:
+            <input type="radio" name="ugender" value="male">Male<input type="radio" name="ugender" value="female">Female</p>
+        <p><button id="submit" onclick="display()">Submit</button></p>
+    </div>
+    <div id="pdisplay">
+
+    </div>
+</body>
+</html>
